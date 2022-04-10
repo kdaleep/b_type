@@ -366,27 +366,27 @@ a
     position: relative;
 }
 .typing-text p span.correct{
-    color: #56964f;
+    color: #7fb800;
 }
 .typing-text p span.incorrect{
-    color: #cb3439;
+    color: #f6511d;
     outline: 1px solid #fff;
-    background: #ffc0cb;
+    background:white;
     border-radius: 4px;
 }
 .typing-text p span.active{
-    color: #17A2B8;
+    color: #00a6ed;
 }
 .typing-text p span.active::before{
     position: absolute;
     content: "";
-    height: 2px;
+    height: 3px;
     width: 100%;
     bottom: 0;
     left: 0;
     opacity: 0;
     border-radius: 5px;
-    background: #17A2B8;
+    background: #00a6ed;
     animation: blink 1s ease-in-out infinite;
 }
 @keyframes blink{

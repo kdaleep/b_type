@@ -51,7 +51,7 @@ Therefore, the celebration of Gurpurab is no less than a homage to a person who 
 ];
 
  const typingText =document.querySelector(".typing-text p");
- let inputField=document.querySelector(".input-field");
+ export let inputField=document.querySelector(".input-field");
  let charIndex=0;
 
 export function randomParagraph()
@@ -67,16 +67,33 @@ export function randomParagraph()
 document.addEventListener("keydown",()=> inputField.focus());
 typingText.addEventListener("click",()=> inputField.focus());
 }
-
-export function startTyping()
+ 
+export function initTyping()
 {
     const characters=typingText.querySelectorAll("span");
     let typedChar = inputField.value.split("")[charIndex];
-    if(characters[charIndex]===typedChar)
-    {
-        console.log("Correct");
-    }
     
+    //if user not typed any char and press backspace
+    if(typedChar == null)
+    {
+       charIndex--;
+       characters[charIndex].classList.remove("correct","incorrect"); 
+    }
+    else
+    {
+      if(characters[charIndex].innerText===typedChar)
+    {
+        characters[charIndex].classList.add("correct");   
+    }
+    else
+    {
+        characters[charIndex].classList.add("incorrect");      
+    }
+    charIndex++;    
+    }
+  
+    characters.forEach(span=>span.classList.remove("active"));
+    characters[charIndex].classList.add("active");
 }
 
 

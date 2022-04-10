@@ -1,5 +1,6 @@
 import {randomParagraph} from "./defaultP.js";
-import {startTyping} from "./defaultP.js";
+import {initTyping} from "./defaultP.js";
+import {inputField} from "./defaultP.js";
 
 const starttimer=1;
 let time=starttimer*60;
@@ -18,6 +19,4 @@ function updateCountdown()
 
 //random paragraph generator
 randomParagraph();
-startTyping();
-
-
+inputField.addEventListener("input",initTyping);
