@@ -64,7 +64,7 @@ export function randomParagraph()
     });
 
 //key listener
-document.addEventListener("keydown",()=> inputField.focus());
+//document.addEventListener("keydown",()=> inputField.focus());
 typingText.addEventListener("click",()=> inputField.focus());
 }
  

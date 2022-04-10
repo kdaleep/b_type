@@ -126,7 +126,7 @@
                                     <div class="inner"></div>
                                     <div class="outer"></div>
                                     <div class="numb">
-                                        1:00
+                                          1
                                     </div>
                                     <div class="circle">
 
@@ -139,15 +139,16 @@
                                     </div>
                                 </div>   
                                 <input type="text" id="custom-time" placeholder="Time">
+                                <button type="Submit" value="submit" onclick="customTime()"> Done</button>
                             </div>
                             <div class="col-10">
-                                
+
                                 <div class="typing-area-border">
                                     <div class="text-field">
-                                    <input type="text" class="input-field">
-                                </div>
+                                        <input type="text" class="input-field">
+                                    </div>
                                     <div class="typing-text">
-                                        <p id="text"> </p>
+                                        <p id="text"></p>
                                     </div>
                                 </div>
                             </div>
@@ -317,6 +318,29 @@
         <!--javascript-->
         <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="javascript/main.js" type="module"></script>
+        <script>
+                                    function customTime()
+                                    {
+                                        var sTime = document.getElementById("custom-time").value;                                      
+                                        var starttimer = sTime;
+                                        var time = starttimer * 60;
+//                                        console.log("Time in seconds :"+time);
+                                        
+                                        
+                                        function updateCountdown()
+                                        {
 
+                                            var minutes = Math.floor(time / 60);
+                                            
+                                            var seconds = time%60;
+                                            
+                                            seconds = seconds < 1 ? '0' + seconds : seconds;
+                                            document.querySelector(".numb").innerHTML =minutes+":"+seconds;
+                                            
+                                                        time--;
+                                                    }
+                                                    setInterval(updateCountdown, 1000);
+                                                }
+        </script>
     </body>
 </html>
