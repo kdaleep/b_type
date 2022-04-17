@@ -120,32 +120,32 @@
                         </div>
 
                         <!--textarea and timer-->
-                        <div class="row">
+                        <div class="row" id="para_Body">
                             <div class="col-2">
-                                <div class="circular">
-                                    <div class="inner"></div>
-                                    <div class="outer"></div>
-                                    <div class="numb">
-                                          1
+                                <div class="timer-animation">
+                                    <div class="player-container" >               
+                                        <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="25"/>
+                                        </svg>
+                                        <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="226.5" cy="226.5" r="216.5" stroke="#f6511d" stroke-width="25"/>
+                                        </svg>                         
+                                        <div class="numb" style="margin-left: -50px;" id="timer"></div>     
                                     </div>
-                                    <div class="circle">
-
-                                        <div class="bar left">
-                                            <div class="progress"></div>
-                                        </div>
-                                        <div class="bar right">
-                                            <div class="progress"></div>
-                                        </div>
-                                    </div>
-                                </div>   
-                                <input type="text" id="custom-time" placeholder="Time">
-                                <button type="Submit" value="submit" onclick="customTime()"> Done</button>
+                                </div>
+                                <div class="textarea_Start">
+                                    <center>
+                                        <input type="text" id="custom-time" placeholder="Time"><br>
+                                        <button  id="retry" class="rBtn">Retry</button> 
+                                        <button  id="start" class="sBtn">Start</button> 
+                                    </center>
+                                </div>
                             </div>
                             <div class="col-10">
 
                                 <div class="typing-area-border">
                                     <div class="text-field">
-                                        <input type="text" class="input-field">
+                                        <input type="text" class="input-field" id="input-Field-Id">
                                     </div>
                                     <div class="typing-text">
                                         <p id="text"></p>
@@ -316,31 +316,9 @@
         </div>
 
         <!--javascript-->
-        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="javascript/main.js" type="module"></script>
-        <script>
-                                    function customTime()
-                                    {
-                                        var sTime = document.getElementById("custom-time").value;                                      
-                                        var starttimer = sTime;
-                                        var time = starttimer * 60;
-//                                        console.log("Time in seconds :"+time);
-                                        
-                                        
-                                        function updateCountdown()
-                                        {
-
-                                            var minutes = Math.floor(time / 60);
-                                            
-                                            var seconds = time%60;
-                                            
-                                            seconds = seconds < 1 ? '0' + seconds : seconds;
-                                            document.querySelector(".numb").innerHTML =minutes+":"+seconds;
-                                            
-                                                        time--;
-                                                    }
-                                                    setInterval(updateCountdown, 1000);
-                                                }
-        </script>
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>   
+        <!--//jquery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="javascript/main.js" type="module"></script>                                
     </body>
 </html>

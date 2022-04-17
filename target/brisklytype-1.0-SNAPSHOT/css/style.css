@@ -1,7 +1,6 @@
 body
 {
     font-family: 'Lato', sans-serif;
-
 }
 a
 {
@@ -219,117 +218,90 @@ a
 }
 /*typing area background*/
 
-/*timer*/
-.circular{
-    height: 100px;
-    width: 100px;
-    position: relative;
-    margin-top:60px;
+/*timer animation*/
+.timer-animation {
+  height:200px;
+  width:200px;
+  display: flex;
+}
+.player-container {
+  position: relative;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.player-container svg {
+  position: absolute;
+  height: 70%;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+.player-container svg circle {
+  transition: all 0.2s ease-in-out;
 }
 
-
-.circular .inner, .circular .outer, .circular .circle
-{
-    position: absolute;
-    z-index: 6;
-    height: 100%;
-    width: 100%;
-    border-radius: 100%;
-    box-shadow: inset 0 1px 0 rgba(0,0,0,0.2);
-}
-.circular .inner{
-    top: 50%;
-    left: 50%;
-    height: 80px;
-    width: 80px;
-    margin: -40px 0 0 -40px;
-    background-color: #dde6f0;
-    border-radius: 100%;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
-}
-.circular .circle{
-    z-index: 1;
-    box-shadow: none;
-}
-.circular .numb{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    font-size: 18px;
-    font-weight: 500;
-
-}
-.circular .bar{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    clip: rect(0px, 100px, 100px, 50px);
-}
-.circle .bar .progress{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    -webkit-border-radius: 100%;
-    clip: rect(0px, 50px, 100px, 0px);
-}
-.circle .bar .progress{
-    background: #f6511d;
-}
-.circle .left .progress{
-    z-index: 1;
-    animation: left 31s linear both;
-}
-@keyframes left {
-    100%{
-        transform: rotate(180deg);
-    }
-}
-.circle .right{
-    z-index: 3;
-    transform: rotate(180deg);
-}
-.circle .right .progress{
-    animation: right 30s linear both;
-    animation-delay: 31s;
-}
-@keyframes right {
-    100%{
-        transform: rotate(180deg);
-    }
-}
-
-@keyframes dot{
-    0% {
-        transform: rotate(-90deg);
-    }
-    50% {
-        transform: rotate(90deg);
-        z-index: 4;
-    }
-    75% {
-        transform: rotate(180deg);
-        z-index: 4;
-    }
-    100% {
-        transform: rotate(270deg);
-        z-index: 4;
-    }
-}
 #custom-time
 {
     margin-top:10px;
-    border-radius:8px;
+    border-radius:5px;
     border-width: 3px;
     border-style: solid;   
-    width:100px;
+    width:135px;
     height:40px;
     text-align: center;
 }
 
+/*//start button +inputfield time*/
+.textarea_Start
+{
+   margin-top: -60px;
+   margin-left: -55px;
+}
+
+.sBtn
+{
+    background-color: #00a6ed;
+    text-align: center;
+    border:none;
+    width:90px;
+    border-radius:5px;
+    height:30px;
+    color:white;
+    margin-top:10px;
+    font-size: 17px;
+}
+.sBtn:hover
+{
+    background-color: #f6511d;
+}
+.rBtn
+{
+    background-color: #00a6ed;
+    text-align: center;
+    border:none;
+    width:90px;
+    border-radius:5px;
+    height:30px;
+    color:white;
+    margin-top:10px;
+    font-size: 17px;
+}
+.rBtn:hover
+{
+    background-color: #f6511d;
+}
+
+/*//Input field where text is typing*/
+.text-field .input-field
+{
+    opacity:0;
+    position:absolute;
+}
 /*textarea*/
 .typing-area-border
 {

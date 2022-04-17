@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="453"
+   height="453"
+   viewBox="0 0 453 453"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="moving-outline.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="1.5540839"
+     inkscape:cx="99.415483"
+     inkscape:cy="225.21307"
+     inkscape:window-width="1600"
+     inkscape:window-height="873"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <circle
+     cx="226.5"
+     cy="226.5"
+     stroke="#018eba"
+     stroke-width="20"
+     id="circle2"
+     r="216.5"
+     style="stroke:#f6511d;stroke-opacity:1" />
+</svg>
