@@ -69,15 +69,16 @@ export function randomParagraph()
     });
 
 
-typingText.addEventListener("click",()=>inputField.focus());
+//typingText.addEventListener("click",()=>inputField.focus());
+inputField.focus();
+
 }
  
 export function initTyping()
 {
     const characters=typingText.querySelectorAll("span");
     let typedChar = inputField.value.split("")[charIndex];
-    
-    //if user not typed any char and press backspace
+//    if user not typed any char and press backspace
     if(typedChar == null)
     {
        charIndex--;
@@ -87,7 +88,7 @@ export function initTyping()
     {
       if(characters[charIndex].innerText===typedChar)
     {
-        characters[charIndex].classList.add("correct");   
+        characters[charIndex].classList.add("correct");  
     }
     else
     {
@@ -97,9 +98,9 @@ export function initTyping()
     charIndex++;  
   
     }
-  
     characters.forEach(span=>span.classList.remove("active"));
     characters[charIndex].classList.add("active");
+    
     
 //    displaying number on screen
     let wpm=Math.round(charIndex/5);

@@ -2,16 +2,32 @@ body
 {
     font-family: 'Lato', sans-serif;
 }
+/*change color on selection of text*/
+
+::selection
+{
+    background-color:#ffb400;  
+}
+
 a
 {
     text-decoration: none;
 }
+
 .container
 {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 /*menu*/
+.navBar
+{
+width:100%;
+}
+.navbar
+{
+ box-shadow: 0 0 10px  0 rgba(0,0,0,0.1);   
+}
 .nav ul li a
 {
     text-decoration: none;
@@ -41,9 +57,10 @@ a
 .msg
 {
     background-color:#ffb400;
-    margin-top:20px;
+    margin-top:120px;
     height:280px;
-    box-shadow:5px 5px 10px #ced4da;
+    box-shadow:0px 0px 10px #ced4da;
+    width:100%;
 }
 #typing-test
 {
@@ -138,6 +155,76 @@ a
 {
     font-size:20px;
     text-align: center;
+}
+
+/*popup window*/
+.popUp
+{
+    width:800px;
+    border-radius: 6px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+    padding:0 30px 30px;
+    background:white;
+}
+.rClose_icon
+{
+   margin-top:20px; 
+}
+.popUp table
+{
+    margin-top:50px;
+    margin-bottom:50px;
+    padding-right: 20px;
+    
+}
+.popUp table td
+{
+    padding-right:10px;
+    
+}
+.rWord-div
+{   
+    margin-left: 70px;
+    width: 260px;
+    border-radius: 14px;
+    border-width: 4px;
+    border-style: solid;
+    border-color:#f6511d;
+    
+}
+.rMistake-div
+{   
+    width: 260px;
+    border-radius: 14px;
+    border-width: 4px;
+    border-style: solid;
+    border-color:#f6511d;
+    
+}
+.rNwpm-div
+{   
+    margin-left: 70px;
+    margin-top:50px;
+    width: 260px;
+    border-radius: 14px;
+    border-width: 4px;
+    border-style: solid;
+    border-color:#f6511d;
+    
+}
+.rAccuracy-div
+{   
+    margin-top:50px;
+    width: 260px;
+    border-radius: 14px;
+    border-width: 4px;
+    border-style: solid;
+    border-color:#f6511d;
+    
 }
 
 /*buttons*/
@@ -320,7 +407,25 @@ a
 }
 .typing-text::-webkit-scrollbar
 {   
-    width:0px;
+    width:10px;
+    background-color: #78b800;
+    
+}
+.typing-text::-webkit-scrollbar-track
+{   
+    width:10px;
+    background: #f1f1f1;
+   
+}
+.typing-text::-webkit-scrollbar-thumb
+{   
+   background-color: #78b800;
+   border-radius: 10px;
+   
+}
+.typing-text::-webkit-scrollbar-thumb:hover
+{   
+   background: #555; 
 }
 .typing-text p{
 
@@ -538,7 +643,19 @@ a
 }
 
 /*definition area*/
-
-
-
+.Definetion-Bg
+{
+    
+}
+.innerDefinetion
+{
+   font-size: 18px;
+   margin-top:80px;
+}
+.card
+{
+   width:320px;
+   border:none;
+   height:500px;
+}
 

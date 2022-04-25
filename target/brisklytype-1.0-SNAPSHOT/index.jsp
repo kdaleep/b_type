@@ -22,32 +22,7 @@
     <body>
 
         <!--navbar-->
-        <div class="container">
-            <div class="row">
-                <div class="col-1">
-                    <div class="logo-area">
-                        <img src="images/logo.png" alt="" width="65px" height="65px"/>
-
-                    </div>
-                </div>
-                <div class="col-2">
-                    <h3 id="site-name">brisklytype.com</h3>
-                </div>
-                <div class="col-6 offset-3">
-                    <div class="nav">
-                        <ul type="none">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Learn</a></li>
-                            <li><a href="#">Course</a></li>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Signup</a></li>
-                            <li><a href="#">i</a></li>                     
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <%@include file="Webpages/navbar.jsp" %>
 
         <!--welcome msg or heading-->
         <div class="container-fluid">
@@ -66,6 +41,7 @@
         </div>
 
         <!--textarea-->
+
         <div class="container-fluid">
             <div class="textarea-bg">   
                 <div class="container">          
@@ -156,7 +132,6 @@
                     </div>
                 </div>
             </div> 
-
             <div class="container">
                 <div class="row">
                     <div class="col-2 offset-5">
@@ -166,6 +141,64 @@
                     </div>
                 </div>
             </div>
+
+            <!--result popup-->
+
+
+
+            <div class="container">
+                <div class="popUp">
+                    <div class="rClose_icon">
+                        <a href="#"> <img src="images/close.png" width="30px" height="30px" alt="" align="right"/></a>
+                    </div>
+                        <table align="center">
+                            <tr>
+                                <td><img src="images/research.png" alt="" width="50px" height="50px"/></td>
+                                <td><h1>Result</h1></td>
+                            </tr>
+                        </table>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="rWord-div">
+                            <h4>WPM</h4>
+                            <p id="rWpm">0</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="rMistake-div">
+                            <h4>Mistakes</h4>
+                            <p id="rMistakes">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="rNwpm-div">
+                            <h4>NWPM</h4>
+                            <p id="rNwpm">0</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="rAccuracy-div">
+                            <h4>Accuracy</h4>
+                            <p id="rAccuracy">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                           <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                    <a href="#"><img src="images/check.png" width="50px" height="50px" alt=""/></a>
+                </div>
+            </div>
+
+
+            <!--//Modes--> 
+
+
+
             <!--modes row 1-->
 
             <div class="container">
@@ -238,87 +271,121 @@
         </div>
 
         <!--Definetion of terms-->
-        <div class="container-fluid">
-            <!--background-->
-            <div class="terms-meaning-bg">
+        <div class='container-fluid'>
+            <div class="Definetion-Bg">
                 <div class="container">
-                    <!--inner background-->
-                    <div class="terms-meaning-define-bg">
-                        <div class="terms-meaning-def-1">
-                            <div class="row">
-                                <div class="col-4">
-                                    <p id="wpm">Word per Minute (WPM) Typing Test</p>
-                                </div>
-                                <div class="col-8">
-                                    <p id="wpm-definition">What is the WPM typing test? There are different types of tests for typing.
-                                        This one is a typing test that expresses your typing skills in words per minute.
-                                        The more you practice typing, and the more you test your typing speed,
-                                        the higher your WPM score will be.
-                                        Some online typing tests and typing test games focus only on WPM typing.
-                                        The disadvantage of the WPM typing test is that you are only learning how to type fast.
-                                        WPM typing tests do not show your accuracy.</p>
+                    <div class="innerDefinetion">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Word per Minute (WPM) Typing Test</h4>
+                                        <hr>
+                                        <p class="card-text">Words per minute (WPM) is the number of words processed per minute, most commonly used to measure and denote the speed of typing or reading speed.
+                                            For measuring typing speed, each word is standardized to be five characters or five keystrokes long, which include white space.</p>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="terms-meaning-def-2">
-                            <div class="row">
-                                <div class="col-4">
-                                    <p id="cpm">What Is CPM and How Can You Calculate It?</p>
-                                </div>
-                                <div class="col-8">
-                                    <p id="cpm-definition">The CPM stands for the number of characters you type per minute, including all the mistakes.
-                                        “Corrected” scores count only correctly typed words.
-                                        WPM is just the corrected CPM divided by five.
-                                        This is the de facto international standard.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="terms-meaning-def-3">
-                            <div class="row">
-                                <div class="col-4">
-                                    <p id="good-score">How Many Words per Minute Is a Good Score?</p>
-                                </div>
-                                <div class="col-8">
-                                    <p id="good-score-definition">An average professional typist usually types around 65 to 75 WPM.
-                                        More advanced positions require 80 to 95 (this is typically the minimum required for dispatch positions and other time-sensitive typing jobs).
-                                        There are also some advanced typists whose work requires speeds above 120 WPM.</p>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">                                   
+                                        <h4 class="card-title">Is This Really a Free Typing Test You Can Use?</h4>
+                                        <hr>
+                                        <p class="card-text">As the makers of brisklytype, customer service software for businesses, we wanted to provide the community of our customers with a free typing test.
+                                            This way, they can consistently practice typing and improve their typing skills.
+                                            We've also made this tool accessible to every visitor of our page. Our tool is a free typing speed test with a WPM score, but it can be also used as a typing speed test for kids.</p>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="terms-meaning-def-4">
-                            <div class="row">
-                                <div class="col-4">
-                                    <p id="avg-speed">What Is the Average Typing Speed?</p>
-                                </div>
-                                <div class="col-8">
-                                    <p id="avg-speed-definition">The average person types between 38 and 40 words per minute (WPM).
-                                        That translates into between 190 and 200 characters per minute (CPM).
-                                        However, professional typists type a lot faster, averaging between 65 and 75 WPM.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="terms-meaning-def-4">
-                            <div class="row">
-                                <div class="col-4">
-                                    <p id="important">Why Is Typing Speed Important to Everyone?</p>
-                                </div>
-                                <div class="col-8">
-                                    <p id="important-definition">The faster you type, the faster you will be able to communicate with others.
-                                        You will be able to save a ton of time on any kind of work that requires typing. 
-                                        At first, it will be a couple of extra minutes that you won’t really notice.
-                                        Over time, the minutes will turn into hours of saved time that you can spend on other activities.</p>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">                                   
+                                        <h4 class="card-title">What Is CPM and How Can You Calculate It?</h4>
+                                        <hr>
+                                        <p class="card-text">The CPM stands for the number of characters you type per minute, including all the mistakes.
+                                            “Corrected” scores count only correctly typed words. WPM is just the corrected CPM divided by five. 
+                                            This is the de facto international standard.</p>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">                              
+                                        <h4 class="card-title">What Is the Average Typing Speed?</h4>
+                                        <hr>
+                                        <p class="card-text">The average person types between 38 and 40 words per minute (WPM).
+                                            That translates into between 190 and 200 characters per minute (CPM).
+                                            However, professional typists type a lot faster, averaging between 65 and 75 WPM.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">What does NWPM mean?</h4>
+                                        <hr>
+                                        <p class="card-text">Alternatively referred to as NWPM, which is short for net words per minute,
+                                            NWAM is short for net words a minute. It is the same as the GWAM (gross words a minute), minus any errors.
+                                            For example, if you typed 400 words in five minutes; divide 400 into 5 to get 80 GWAM.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">                                   
+                                        <h4 class="card-title">What does wpm or GWPM stand for?</h4>
+                                        <hr>
+                                        <p class="card-text">Alternatively referred to as GWPM (gross words per minute), GWAM is short for gross words a minute and is similar to WPM,
+                                            except it does not account for any errors. GWAM is often used as a measurement for users who are learning to type and is later replaced by WPM.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">                                   
+                                        <h4 class="card-title">What is the fastest typing technique?</h4>
+                                        <hr>
+                                        <p class="card-text">Touch-typing is also generally faster than hunting and pecking.
+                                            This is because keeping your hands still and making use of all eight fingers and thumbs on the space bar is more efficient than moving them around the keyboard in search of individual keys.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">                              
+                                        <h4 class="card-title">Why Is Typing Speed Important to Everyone?</h4>
+                                        <hr>
+                                        <p class="card-text">The faster you type, the faster you will be able to communicate with others.
+                                            You will be able to save a ton of time on any kind of work that requires typing.
+                                            At first, it will be a couple of extra minutes that you won’t really notice.
+                                            Over time, the minutes will turn into hours of saved time that you can spend on other activities.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
         </div>
 
+        
         <!--javascript-->
-        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>   
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<!--        <script src="javascript/js/chart.js" type="text/javascript"></script>
+        <script src="javascript/js/chart.js" type="text/javascript"></script>-->
+        
         <!--//jquery-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="javascript/main.js" type="module"></script>                                
+        <script src="javascript/main.js" type="module"></script>   
     </body>
 </html>

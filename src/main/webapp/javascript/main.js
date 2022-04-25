@@ -12,18 +12,14 @@ reTry.addEventListener("click",()=>
 {
   window.location.reload();
   document.getElementById('custom-time').value = '';
-  document.getElementById('input-Field-Id').value = '';
-  
-  
+  document.getElementById('input-Field-Id').value = ''; 
 });
 //
 //timer
         $( "#start" ).one("click", function() { 
     	customTime();
-         randomParagraph();
+        randomParagraph();
     }); 
-    
-//init typing
  inputField.addEventListener("input", initTyping);
 
 
