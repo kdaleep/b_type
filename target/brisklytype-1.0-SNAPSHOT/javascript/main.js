@@ -2,6 +2,7 @@ import {randomParagraph} from "./defaultP.js";
 import {initTyping} from "./defaultP.js";
 import {inputField} from "./defaultP.js";
 import {customTime} from "./timer.js";  
+import {closeResultDialog} from "./typingResult.js";  
 //declaration of variables  
 let reTry=document.querySelector(".rBtn");
 
@@ -21,5 +22,9 @@ reTry.addEventListener("click",()=>
         randomParagraph();
     }); 
  inputField.addEventListener("input", initTyping);
+ 
 
 
+//close Reslut dialog box
+document.getElementById("rClose").addEventListener("click", closeResultDialog);
+document.getElementById("rCloseOkBtn").addEventListener("click", closeResultDialog);

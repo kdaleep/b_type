@@ -51,13 +51,17 @@ Therefore, the celebration of Gurpurab is no less than a homage to a person who 
 ];
 
  const typingText =document.querySelector(".typing-text p");
- var Time = document.getElementById("custom-time").value;
+ 
  export let inputField=document.querySelector(".input-field");
-  let mistakeD=-1;
+ export  let mistakeD=-1;
  let charIndex=0;
-
 let wpmD=document.querySelector(".word-min p");
 let cpmD=document.querySelector(".Character-min p");
+let accuracyD=document.querySelector(".accuracy p");
+let resultMistakes=document.querySelector("#rMistakes");
+let resultSpeed=document.querySelector("#rWpm");
+let resultNetWpm=document.querySelector("#rNwpm");
+let resultAccuracy=document.querySelector("#rAccuracy");
 
 export function randomParagraph()
 {
@@ -76,12 +80,17 @@ inputField.focus();
  
 export function initTyping()
 {
+    var sTime = document.querySelector("#custom-time").value;
     const characters=typingText.querySelectorAll("span");
     let typedChar = inputField.value.split("")[charIndex];
 //    if user not typed any char and press backspace
     if(typedChar == null)
     {
        charIndex--;
+       if(characters[charIndex].classList.contains("incorrect"))
+       {
+           mistakeD--;
+       }
        characters[charIndex].classList.remove("correct","incorrect"); 
     }
     else
@@ -101,11 +110,23 @@ export function initTyping()
     characters.forEach(span=>span.classList.remove("active"));
     characters[charIndex].classList.add("active");
     
-    
-//    displaying number on screen
+    //Some terms calculation
     let wpm=Math.round(charIndex/5);
+    let nwpmSpeed=Math.round(((charIndex-mistakeD)/5)/sTime);
+    let wpmSpeed=Math.round(wpm/sTime);
+    let accuracy=Math.round((((charIndex-mistakeD)/5)/wpm)*100);
+    accuracy=accuracy <0 || accuracy == Infinity ? 0: accuracy;
+    let displayaccuracy=accuracy+"%";
+    wpmSpeed=wpmSpeed <0 || !wpm || wpm == Infinity ? 0: wpmSpeed;
+//    displaying number on screen
+    
     wpmD.innerText=wpm;
     cpmD.innerText=charIndex-1;
+    accuracyD.innerText=accuracy;
+    resultMistakes.innerText=mistakeD;
+    resultSpeed.innerText=wpmSpeed;
+    resultNetWpm.innerText=nwpmSpeed;
+    resultAccuracy.innerText=displayaccuracy;
 }
 
 
