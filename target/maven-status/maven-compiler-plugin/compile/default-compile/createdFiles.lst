@@ -1,0 +1,4 @@
+com\briskly\type\servlets\signUp.class
+com\briskly\type\helper\connectionProvider.class
+com\briskly\type\dao\userDao.class
+com\briskly\type\entities\user.class

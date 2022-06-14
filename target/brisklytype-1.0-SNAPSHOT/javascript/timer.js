@@ -1,6 +1,6 @@
 export function customTime()
 {
-    var sTime = document.getElementById("custom-time").value;
+    var sTime = document.querySelector('#time').value;
     const outline = document.querySelector(".moving-outline circle");
     const outlineLength = outline.getTotalLength();
     var my_interval;

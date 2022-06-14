@@ -1,17 +1,28 @@
+/*......................
+
+
+Index page design
+
+
+......................*/
 body
 {
     font-family: 'Lato', sans-serif;
-    
+
 }
 
 /*change color on selection of text*/
 
 ::selection
 {
-    background-color:#ffb400;  
+    background-color:#ffb400;
 }
 
 a
+{
+    text-decoration: none;
+}
+a:hover
 {
     text-decoration: none;
 }
@@ -19,30 +30,28 @@ a
 .container
 {
     margin-top: 40px;
-    
+
 }
 
-/*menu*/
-.navBar
+/*navigationbar*/
+
+#siteName
 {
-width:100%;
+    color: black;
+    font-size: 28px;
 }
-.navbar
-{
- box-shadow: 0 0 10px  0 rgba(0,0,0,0.1);   
-}
-.nav ul li a
+#navbarSupportedContent ul li a
 {
     text-decoration: none;
     color:black;
 }
-.nav ul li{
-    font-size: 28px;
+#navbarSupportedContent ul li{
+    font-size: 24px;
     padding-left: 20px;
     padding-right: 12px;
-    float:left;    
+    float:left;
 }
-.nav ul li::after {
+#navbarSupportedContent ul li::after {
     content: '';
     display: block;
     width: 0;
@@ -51,39 +60,128 @@ width:100%;
     transition: width .5s;
 }
 
-.nav ul li:hover::after
+#navbarSupportedContent ul li:hover::after
 {
-    width: 100%;    
+    width: 100%;
 }
 
+
+/*Start typing button*/
+.startTypingButton button:hover
+{
+    background-color: #f6511d;
+}
+
+
+/*Start typing button end*/
+
+
+
 /*message*/
-.msg
+
+#headingBg
 {
     background-color:#ffb400;
-    margin-top:120px;
-    height:280px;
     box-shadow:0px 0px 10px #ced4da;
-    width:100%;
 }
-#typing-test
+.typingSpeedTest
 {
-    color:white;
-    margin-top:40px;
+    text-align: center;
+    margin-top: 100px;
+
 }
-#type-in-an
+#tSP
 {
-    font-size:55px;
-    color:white;
-    margin-top:15px;
+    font-size: 32px;
+    color: white;
+    padding-top:50px;
 }
+@media only screen and (max-width: 768px)
+{
+    #tia
+    {
+        font-size:22px;
+    }
+}
+.typeInAn
+{
+    text-align:center;
+
+}
+#tia
+{
+    font-size:50px;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+@media only screen and (max-width: 768px)
+{
+    #tia
+    {
+        font-size:32px;
+    }
+}
+.typeInAn h1 {
+    color: #fff;
+    overflow: hidden;
+    border-right: .10em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 3.5s steps(30, end),blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: black
+    }
+}
+
+/*message end*/
+
 
 /*typing area main body*/
 .textarea-bg
 {
     background-image:url('bg.png');
     height:420px;
-    /*background-color:#e5e5e5;*/
     margin-top:-22px;
+}
+
+/*statTypingButton code start*/
+
+.startTypingButton
+{
+    text-align: center;
+}
+#sTB
+{
+    width:200px;
+    height:70px;
+    margin-top:160px;
+    font-size:30px;
+}
+
+
+.typing-area
+{
+    margin-top:-450px;
+    visibility: hidden;
 }
 
 /*words per minutes*/
@@ -95,7 +193,7 @@ width:100%;
     border-width: 6px;
     border-style: solid;
     border-color:#f6511d;
-    height:90px;   
+    height:90px;
 }
 #word
 {
@@ -120,7 +218,7 @@ width:100%;
     border-width: 6px;
     border-style: solid;
     border-color:#f6511d;
-    height:90px;   
+    height:90px;
 }
 #char
 {
@@ -145,7 +243,7 @@ width:100%;
     border-width: 6px;
     border-style: solid;
     border-color:#f6511d;
-    height:90px;   
+    height:90px;
 }
 #accuracy
 {
@@ -165,190 +263,114 @@ width:100%;
 {
     padding-top: 4px;
     width:650px;
-    border-radius: 6px;  
+    border-radius: 6px;
     background-color: white;
-    visibility:hidden;  
+    visibility:hidden;
     transform:scale(0.8);
     margin-top:-550px;
     position:absolute;
     box-shadow: rgba(112, 128, 175, 0.5) 0px 16px 24px 0px;
-    transition:transform 0.8s;  
+    transition:transform 0.8s;
 }
 
 .rHeading
 {
-  background-color:#f6511d;  
-  color:white;
- 
-  
+    background-color:#f6511d;
+    color:white;
+
+
 }
 .rClose_icon
 {
-   margin-top:20px; 
-   margin-right: 20px;
-   cursor: pointer;
-   padding-bottom: 0.2px;
-   
+    margin-top:20px;
+    margin-right: 20px;
+    cursor: pointer;
+    padding-bottom: 0.2px;
+
 }
 .rOk
 {
-   margin-top:20px; 
-   cursor: pointer;
-   margin-bottom: 20px;
-   align-content: center;
-   margin-left: 15px;
+    margin-top:20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    align-content: center;
+    margin-left: 15px;
 }
 .popUp table
 {
     margin-top:50px;
     margin-bottom:50px;
     padding-right: 20px;
-    
+
 }
 .popUp table td
 {
     padding-right:10px;
-    
+
 }
 .rWord-div
-{   
+{
 
     border-radius: 7px;
     border-width: 4px;
     border-style: solid;
     border-color:#f6511d;
-    
+
 }
 .rMistake-div
-{   
+{
 
     border-radius: 7px;
     border-width: 4px;
     border-style: solid;
     border-color:#f6511d;
-    
+
 }
 .rNwpm-div
-{   
+{
     margin-top:50px;
     border-radius: 7px;
     border-width: 4px;
     border-style: solid;
     border-color:#f6511d;
-    
+
 }
 .rAccuracy-div
-{   
+{
     margin-top:50px;
     border-radius: 7px;
     border-width: 4px;
     border-style: solid;
     border-color:#f6511d;
-    
-}
-
-/*buttons*/
-
-/*normal*/
-.btn-normal
-{
-    margin-top: 60px;
-    width: 140px;  
-    height:60px; 
-    background-color: #78b800;
-    border-radius: 6px;
-    box-shadow: 3px 3px 4px #ced4da;
 
 }
-.btn-normal:hover
-{  
-    width: 143px;  
-    height:63px; 
-    background-color: #00a6ed;
-}
-#normal
-{
-    text-align: center;
-    color:white;
-    font-size: 26px;
-    padding-top: 7px;
-}
 
-/*intermediate*/
-.btn-intermediate
-{
-    margin-top: 60px;
-    width: 140px;  
-    height:60px; 
-    background-color: #ffb400;
-    border-radius: 6px;
-    box-shadow: 3px 3px 4px #ced4da;
-
-}
-.btn-intermediate:hover
-{  
-    width: 143px;  
-    height:63px; 
-    background-color: #00a6ed;
-}
-#intermediate
-{
-    text-align: center;
-    color:white;
-    font-size: 26px;
-    padding-top: 7px;
-}
-
-/*expert*/
-.btn-expert
-{
-    margin-top: 60px;
-    width: 140px;  
-    height:60px; 
-    background-color: #f6511d;
-    border-radius: 6px;
-    box-shadow: 3px 3px 4px #ced4da;
-
-}
-.btn-expert:hover
-{  
-    width: 143px;  
-    height:63px; 
-    background-color: #00a6ed;
-}
-#expert
-{
-    text-align: center;
-    color:white;
-    font-size: 26px;
-    padding-top: 7px;
-}
 /*typing area background*/
 
 /*timer animation*/
 .timer-animation {
-  height:200px;
-  width:200px;
-  display: flex;
+    height:200px;
+    width:200px;
+    display: flex;
 }
 .player-container {
-  position: relative;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex: 1;
+    position: relative;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
 }
 .player-container svg {
-  position: absolute;
-  height: 70%;
-  top: 50%;
-  left: 35%;
-  transform: translate(-50%, -50%) rotate(-90deg);
-  pointer-events: none;
+    position: absolute;
+    height: 70%;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    pointer-events: none;
 }
 .player-container svg circle {
-  transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 #custom-time
@@ -356,7 +378,7 @@ width:100%;
     margin-top:10px;
     border-radius:5px;
     border-width: 3px;
-    border-style: solid;   
+    border-style: solid;
     width:135px;
     height:40px;
     text-align: center;
@@ -365,8 +387,8 @@ width:100%;
 /*//start button +inputfield time*/
 .textarea_Start
 {
-   margin-top: -60px;
-   margin-left: -55px;
+    margin-top: -60px;
+    margin-left: -55px;
 }
 
 .sBtn
@@ -425,26 +447,26 @@ width:100%;
     overflow-y: auto;
 }
 .typing-text::-webkit-scrollbar
-{   
+{
     width:10px;
     background-color: #78b800;
-    
+
 }
 .typing-text::-webkit-scrollbar-track
-{   
+{
     width:10px;
     background: #f1f1f1;
-   
+
 }
 .typing-text::-webkit-scrollbar-thumb
-{   
-   background-color: #78b800;
-   border-radius: 10px;
-   
+{
+    background-color: #78b800;
+    border-radius: 10px;
+
 }
 .typing-text::-webkit-scrollbar-thumb:hover
-{   
-   background: #555; 
+{
+    background: #555;
 }
 .typing-text p{
 
@@ -464,6 +486,15 @@ width:100%;
 .typing-text p span.correct{
     color: #7fb800;
 }
+.typing-text p span.blind{
+    color: white;
+}
+.typing-text p span.incorrect{
+    color: #f6511d;
+    outline: 1px solid #fff;
+    background:white;
+    border-radius: 4px;
+}
 .typing-text p span.incorrect{
     color: #f6511d;
     outline: 1px solid #fff;
@@ -475,220 +506,329 @@ width:100%;
 }
 .typing-text p span.active::before{
     position: absolute;
-    content: "";
+    content:"";
     height: 3px;
     width: 100%;
     bottom: 0;
-    left: 0;
+    left:0;
     opacity: 0;
     border-radius: 5px;
     background: #00a6ed;
     animation: blink 1s ease-in-out infinite;
 }
 @keyframes blink{
-    50%{ 
-        opacity: 1; 
+    50%{
+        opacity: 1;
     }
-}
-
-/*modes area*/
-/*mode*/
-.mode
-{
-    background-color: #00a6ed;
-    width:160px;
-    height:50px;
-    text-align: center;
-    border-radius:0px 20px 0px 20px;
-    margin-left: 40px;
-}
-#mode
-{
-    font-size: 28px;
-    color:white;
-
-}
-
-/*Mode options*/
-/* 1 */
-.none
-{
-    background-color: #00a6ed;
-    text-align: center;
-    border-radius:3px;
-    width:140px;
-    height:40px;
-}
-.none:hover
-{
-    background-color: #f6511d;
-}
-#none
-{
-    font-size: 22px;
-    color:white;   
-}
-/* 2 */
-.digits
-{
-
-    background-color: #00a6ed;
-    text-align: center;
-    border-radius:3px;
-    width:140px;
-    height:40px;
-}
-.digits:hover
-{
-    background-color: #f6511d;
-}
-#digits
-{
-    font-size: 22px;
-    color:white;   
-}
-/* 3 */
-.arrows
-{
-    background-color: #00a6ed;
-    text-align: center;
-    border-radius:3px;
-    width:140px;
-    height:40px;
-}
-.arrows:hover
-{
-    background-color: #f6511d;
-}
-#arrows
-{
-    font-size: 22px;
-    color:white;   
-}
-
-/* 4 */
-.capitals
-{
-    background-color: #00a6ed;
-    text-align: center;
-    border-radius:3px;
-    width:140px;
-    height:40px;
-}
-.capitals:hover
-{
-    background-color: #f6511d;
-}
-#capitals
-{
-    font-size: 22px;
-    color:white;   
-}
-
-/* 5 */ 
-.nospace
-{
-    background-color: #00a6ed;
-    text-align: center;
-    border-radius:3px;
-    width:140px;
-    height:40px;
-}
-.nospace:hover
-{
-    background-color: #f6511d;
-}
-#nospace
-{
-    font-size: 22px;
-    color:white;   
-}
-
-/* 6 */
-.simon
-{
-    background-color: #00a6ed;
-    text-align: center;
-    border-radius:3px;
-    width:140px;
-    height:40px;
-}
-.simon:hover
-{
-    background-color: #f6511d;
-}
-#simon
-{
-    font-size: 22px;
-    color:white;   
-}
-
-/* 7 */
-.specials
-{
-    background-color: #00a6ed;
-    text-align: center;
-    border-radius:3px;
-    width:140px;
-    height:40px;
-}
-.specials:hover
-{
-    background-color: #f6511d;
-}
-#specials
-{
-    font-size: 22px;
-    color:white;   
-}
-
-/* 8 */
-.blind
-{
-    background-color: #00a6ed;
-    text-align: center;
-    border-radius:3px;
-    width:140px;
-    height:40px;
-}
-.blind:hover
-{
-    background-color: #f6511d;
-}
-#blind
-{
-    font-size: 22px;
-    color:white;   
 }
 
 /*definition area*/
 .Definetion-Bg
 {
-    
 }
 .innerDefinetion
 {
-   font-size: 18px;
-   margin-top:80px;
-}
-.card
-{
-   width:320px;
-   border:none;
-   height:500px;
+    font-size: 18px;
+
 }
 
 
-/*Definetion area*/
-.Definetion-Bg
+/*Definetion area end*/
+
+
+
+/*Footer area*/
+.linksArea
 {
-    margin-top: 100px;
-    background-image: url("definetion-bgb.jpg");
-    background-repeat: no-repeat;
-    padding-top:5px;
-    
+    background: white;
 }
-.definetionRow2
+.submitQuery
 {
-    margin-top:40px;
+
+}
+#submitQueryTxtArea
+{
+    margin-top:30px;
+    resize:none;
+    font-size:22px;
+}
+
+.submitQueryBtn
+{
+    background-color: #00a6ed;
+    text-align: center;
+    border-radius:3px;
+    width:140px;
+    height:40px;
+    float:right;
+    margin-top:10px;
+}
+.submitQueryBtn:hover
+{
+    background-color: #f6511d;
+}
+#submitQueryBtn
+{
+    font-size: 22px;
+    color:white;
+}
+
+.socialMediaLink
+{
+
+}
+.quickLinks a
+{
+    text-decoration:none;
+    font-size: 22px;
+    color:white;
+    font-weight:bolder;
+}
+.quickLinks a:hover
+{
+    text-decoration:none;
+    color:black;
+
+}
+
+
+
+/*......................
+
+
+Signin form design
+
+
+......................*/
+.formsArea
+{
+    margin-top:200px;
+    margin-bottom:150px;
+}
+#signInHeader
+{
+    background-color: #78b800;
+    color:white;
+    text-align: center;
+}
+
+.signInForm .form-control:focus
+{
+    border-color: #f6511d;
+    box-shadow: none;
+}
+.signInForm .form-check-input
+{
+    background-color:white;
+}
+.signInForm .form-check-input:focus
+{
+    background-color: #78b800;
+    box-shadow: none;
+}
+.signInForm .form-control
+{
+    border-radius:0;
+    border:0;
+    border-bottom: 3px solid #78b800;
+    padding-top:30px;
+}
+
+.signInForm .btn
+{
+    background-color: #78b800;
+    color:white;
+    text-align: center;
+    border-radius:2px;
+    width:200px;
+    border:none;
+    box-shadow:2px 3px 4px #888888;
+}
+.signInForm .btn:hover
+{
+    background-color:#f6511d;
+    color:white;
+    text-align: center;
+    border-radius:2px;
+}
+
+/*......................
+
+
+Signin form design
+
+
+......................*/
+#signUpHeader
+{
+    background-color: #78b800;
+    color:white;
+    text-align: center;
+}
+
+.signUpForm .form-control:focus
+{
+    border-color: #f6511d;
+    box-shadow: none;
+}
+.signUpForm .form-check-input
+{
+    background-color:white;
+}
+.signUpForm .form-check-input:focus
+{
+    background-color: #78b800;
+    box-shadow: none;
+}
+.signUpForm .form-control
+{
+    border-radius:0;
+    border:0;
+    border-bottom: 3px solid #78b800;
+    padding-top:30px;
+}
+
+.signUpForm .btn
+{
+    background-color: #78b800;
+    color:white;
+    text-align: center;
+    border-radius:2px;
+    width:200px;
+    border:none;
+    box-shadow:2px 3px 4px #888888;
+}
+.signUpForm .btn:hover
+{
+    background-color:#f6511d;
+    color:white;
+    text-align: center;
+    border-radius:2px;
+}
+
+
+/*......................
+
+
+learn page design
+
+
+......................*/
+
+.learn
+{
+  margin-top:120px;  
+}
+.learn table
+{
+  box-shadow: 2px 2px 8px #888888;  
+  border-radius: 10px;
+  margin-bottom:40px; 
+}
+.learn table td
+{
+ padding:30px;
+border-spacing: 30px;
+}
+
+
+
+
+#learn-Heading
+{
+    color:#78b800;
+}
+
+
+/*......................
+
+
+aboutUs page design
+
+
+......................*/
+
+.aboutUs
+{
+    margin-top:120px;
+}
+#aboutUs-Heading
+{
+    color:#78b800;
+}
+
+/*......................
+
+
+error page design
+
+
+......................*/
+
+.errorPage
+{
+    margin-top:120px;
+}
+
+/*......................
+
+
+profile page design
+
+
+......................*/
+
+.profile
+{
+    margin-top:120px;
+}
+
+.course .row
+{
+    margin-bottom:40px;
+}
+.course .btn
+{
+    background-color: #78b800;
+    border:0;
+}
+.course .btn:hover
+{
+    background-color: #f6511d;
+}
+.course .card-body:hover
+{
+    box-shadow: 2px 2px 12px #888888;
+}
+.keyboard
+{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height:100vh;
+    flex-direction: column;
+    margin:0 10px;
+}
+.keyboardKeys
+{
+    max-width:1008px;
+    width:100%;
+    background-color: white;
+    overflow:hidden;
+    position: relative;
+    order:2;
+}
+.keyboardKeys .row
+{
+    display:flex;
+}
+.keys
+{
+    width:60px;
+    height:60px;
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:4px;
 }
